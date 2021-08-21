@@ -1,0 +1,13 @@
+/target/
+/.classpath
+/.project
+/.settings/
+
+ProyectoJavaCliente/.idea/
+ProyectoJavaCliente/socket.iml
+ProyectoJavaCliente/target/
+
+
+ProyectoJavaServidor/.idea/
+ProyectoJavaServidor/socket.iml
+ProyectoJavaServidor/target/
