@@ -6,6 +6,9 @@ public class Cama {
     private boolean ocupado;
     private boolean habilitado;
 
+    public Cama(){
+
+    }
     public Cama(int hospital_id, int cama_id, boolean ocupado, boolean habilitado) {
         this.hospital_id = hospital_id;
         this.cama_id = cama_id;
@@ -43,5 +46,10 @@ public class Cama {
 
     public void setHabilitado(boolean habilitado) {
         this.habilitado = habilitado;
+    }
+
+    @Override
+    public String toString() {
+        return cama_id + " " + hospital_id+ ((isOcupado())?"Ocupado":"No ocupado") + " "+ (isHabilitado()?"Habilitado":"Deshabilitado");
     }
 }

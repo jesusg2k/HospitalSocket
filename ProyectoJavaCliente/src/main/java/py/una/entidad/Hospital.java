@@ -42,4 +42,13 @@ public class Hospital {
 	public void setCamas(List<Cama> camas) {
 		this.camas = camas;
 	}
+
+	public void agregar_cama(Cama cama){
+		camas.add(cama);
+	}
+
+	@Override
+	public String toString() {
+		return id + " " + nombre;
+	}
 }
