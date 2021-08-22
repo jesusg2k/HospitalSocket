@@ -3,6 +3,8 @@
 /.project
 /.settings/
 
+.idea/
+
 ProyectoJavaCliente/.idea/
 ProyectoJavaCliente/socket.iml
 ProyectoJavaCliente/target/
@@ -11,3 +13,5 @@ ProyectoJavaCliente/target/
 ProyectoJavaServidor/.idea/
 ProyectoJavaServidor/socket.iml
 ProyectoJavaServidor/target/
+
+ProyectoJavaServidor/.idea/
