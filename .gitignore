@@ -13,5 +13,11 @@ ProyectoJavaCliente/target/
 ProyectoJavaServidor/.idea/
 ProyectoJavaServidor/socket.iml
 ProyectoJavaServidor/target/
+<<<<<<< HEAD
 
 ProyectoJavaServidor/.idea/
+=======
+ProyectoJavaCliente/.classpath
+ProyectoJavaCliente/.project
+ProyectoJavaCliente/.settings/
+>>>>>>> 379a2f75cfd26c0b93b25afeded0b043ca594adb
