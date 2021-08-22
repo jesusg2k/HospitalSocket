@@ -8,8 +8,7 @@ import java.util.List;
 
 public class TestHospitalDAO {
 
-	
-	
+
 	public static void main(String args[]) throws SQLException{
 		ArrayList<Hospital> hospitales = new HospitalDAO().hospitales_detalles();
 		for(Hospital h: hospitales){
@@ -37,7 +36,7 @@ public class TestHospitalDAO {
 		String hospitales_json = HospitalJSON.listHospitales_toString(hospitales);
 		System.out.println(hospitales_json);
 		try {
-			ArrayList<Hospital> convertidos = HospitalJSON.listHospitalJSON_toHospitales(hospitales_json);
+			ArrayList<Hospital> convertidos = HospitalJSON.listHospitalJSON_toHospitales(hospitales_json, "hospitales");
 			for(Hospital h: convertidos){
 				System.out.println(h);
 				for(Cama c: h.getCamas()){

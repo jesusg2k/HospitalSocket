@@ -61,14 +61,14 @@ public class HospitalJSON {
         return obj.toJSONString();
     }
 
-    public static ArrayList<Hospital> listHospitalJSON_toHospitales(String str) throws Exception {
+    public static ArrayList<Hospital> listHospitalJSON_toHospitales(String str, String nombre_campo) throws Exception {
         ArrayList<Hospital> hospitales = new ArrayList<Hospital>();
         JSONParser parser = new JSONParser();
 
         Object obj = parser.parse(str.trim());
         JSONObject jsonObject = (JSONObject) obj;
 
-        JSONArray msg = (JSONArray) jsonObject.get("hospitales");
+        JSONArray msg = (JSONArray) jsonObject.get(nombre_campo);
         Iterator<String> iterator = msg.iterator();
         while (iterator.hasNext()) {
             hospitales.add(stringToHospital(iterator.next()));
