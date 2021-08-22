@@ -4,8 +4,6 @@ package py.una.server.udp;
 import java.io.*;
 import java.net.*;
 
-import py.una.entidad.Persona;
-import py.una.entidad.PersonaJSON;
 
 class UDPClient {
 
@@ -47,9 +45,10 @@ class UDPClient {
             System.out.print("Ingrese el apellido: ");
             String apellido = inFromUser.readLine();
             
-            Persona p = new Persona(cedula, nombre, apellido);
+            //Persona p = new Persona(cedula, nombre, apellido);
             
-            String datoPaquete = PersonaJSON.objetoString(p); 
+            //String datoPaquete = PersonaJSON.objetoString(p);
+            String datoPaquete = "hola";
             sendData = datoPaquete.getBytes();
 
             System.out.println("Enviar " + datoPaquete + " al servidor. ("+ sendData.length + " bytes)");
@@ -71,7 +70,7 @@ class UDPClient {
                 clientSocket.receive(receivePacket);
 
                 String respuesta = new String(receivePacket.getData());
-                Persona presp = PersonaJSON.stringObjeto(respuesta.trim());
+              //  Persona presp = PersonaJSON.stringObjeto(respuesta.trim());
                 
                 InetAddress returnIPAddress = receivePacket.getAddress();
                 int port = receivePacket.getPort();
@@ -79,9 +78,9 @@ class UDPClient {
                 System.out.println("Respuesta desde =  " + returnIPAddress + ":" + port);
                 System.out.println("Asignaturas: ");
                 
-                for(String tmp: presp.getAsignaturas()) {
+            /*    for(String tmp: presp.getAsignaturas()) {
                 	System.out.println(" -> " +tmp);
-                }
+                }*/
                 
 
             } catch (SocketTimeoutException ste) {
