@@ -18,7 +18,7 @@ public class HospitalDAO {
         ArrayList<Cama> camas = new ArrayList<>(new CamaDAO().camas_habilitadas());
 
         /*asociamos los hospitales con su ID*/
-        HashMap<Integer, Hospital> hashMap = new HashMap<>();
+        HashMap<Long, Hospital> hashMap = new HashMap<>();
         for(Hospital hospital: hospitales) hashMap.put(hospital.getId(), hospital);
 
         /*cargamos las camas a los hospitales*/
@@ -26,7 +26,6 @@ public class HospitalDAO {
             Hospital hospital = hashMap.get(cama.getHospital_id());
             hospital.agregar_cama(cama);
         }
-
         return hospitales;
     }
 
@@ -44,7 +43,7 @@ public class HospitalDAO {
 
         	while(rs.next()) {
         		Hospital h = new Hospital();
-        		h.setId(rs.getInt(1));
+        		h.setId(rs.getLong(1));
         		h.setNombre(rs.getString(2));
         		lista.add(h);
         	}
@@ -77,7 +76,7 @@ public class HospitalDAO {
 
         	while(rs.next()) {
                 Hospital h = new Hospital();
-                h.setId(rs.getInt(1));
+                h.setId(rs.getLong(1));
                 h.setNombre(rs.getString(2));
                 lista.add(h);
         	}

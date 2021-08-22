@@ -24,8 +24,8 @@ public class CamaDAO {
 
 			while(rs.next()) {
 				Cama c = new Cama();
-				c.setCama_id(rs.getInt(1));
-				c.setHospital_id(rs.getInt(2));
+				c.setCama_id(rs.getLong(1));
+				c.setHospital_id(rs.getLong(2));
 				c.setOcupado(rs.getBoolean(3));
 				c.setHabilitado(rs.getBoolean(4));
 				lista.add(c);
@@ -59,8 +59,8 @@ public class CamaDAO {
 
 			while(rs.next()) {
 				Cama c = new Cama();
-				c.setCama_id(rs.getInt(1));
-				c.setHospital_id(rs.getInt(2));
+				c.setCama_id(rs.getLong(1));
+				c.setHospital_id(rs.getLong(2));
 				c.setOcupado(rs.getBoolean(3));
 				c.setHabilitado(rs.getBoolean(4));
 				lista.add(c);
@@ -93,8 +93,8 @@ public class CamaDAO {
 
         	while(rs.next()) {
         		Cama c = new Cama();
-        		c.setCama_id(rs.getInt(1));
-        		c.setHospital_id(rs.getInt(2));
+        		c.setCama_id(rs.getLong(1));
+        		c.setHospital_id(rs.getLong(2));
         		c.setOcupado(rs.getBoolean(3));
         		c.setHabilitado(rs.getBoolean(4));
         		lista.add(c);
@@ -128,8 +128,8 @@ public class CamaDAO {
 
 			while(rs.next()) {
 				Cama c = new Cama();
-				c.setCama_id(rs.getInt(1));
-				c.setHospital_id(rs.getInt(2));
+				c.setCama_id(rs.getLong(1));
+				c.setHospital_id(rs.getLong(2));
 				c.setOcupado(rs.getBoolean(3));
 				c.setHabilitado(rs.getBoolean(4));
 				lista.add(c);
@@ -163,8 +163,8 @@ public class CamaDAO {
 
 			while(rs.next()) {
 				Cama c = new Cama();
-				c.setCama_id(rs.getInt(1));
-				c.setHospital_id(rs.getInt(2));
+				c.setCama_id(rs.getLong(1));
+				c.setHospital_id(rs.getLong(2));
 				c.setOcupado(rs.getBoolean(3));
 				c.setHabilitado(rs.getBoolean(4));
 				lista.add(c);
@@ -193,7 +193,7 @@ public class CamaDAO {
 		{
 			conn = Bd.connect();
 			PreparedStatement pstmt = conn.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
-			pstmt.setInt(1, cama.getCama_id());
+			pstmt.setLong(1, cama.getCama_id());
 
 			int affectedRows = pstmt.executeUpdate();
 			// check the affected rows
@@ -225,7 +225,7 @@ public class CamaDAO {
 		{
 			conn = Bd.connect();
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
-			pstmt.setInt(1, cama.getCama_id());
+			pstmt.setLong(1, cama.getCama_id());
 
 			int affectedRows = pstmt.executeUpdate();
 			// check the affected rows
@@ -257,7 +257,7 @@ public class CamaDAO {
 		{
 			conn = Bd.connect();
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
-			pstmt.setInt(1, cama.getCama_id());
+			pstmt.setLong(1, cama.getCama_id());
 
 			int affectedRows = pstmt.executeUpdate();
 			// check the affected rows
@@ -291,7 +291,7 @@ public class CamaDAO {
         {
         	conn = Bd.connect();
         	PreparedStatement pstmt = conn.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
-            pstmt.setInt(1, hospital.getId());
+            pstmt.setLong(1, hospital.getId());
             pstmt.setBoolean(2, false); //ocupacion
             pstmt.setBoolean(3, true);  //habilitado
             int affectedRows = pstmt.executeUpdate();

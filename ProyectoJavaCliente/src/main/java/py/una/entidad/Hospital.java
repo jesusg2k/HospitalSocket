@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Hospital {
 
-	Integer id;
+	Long id;
 	String nombre;
 
 	List<Cama> camas;
@@ -13,17 +13,17 @@ public class Hospital {
 		camas = new ArrayList<Cama>();
 	}
 
-	public Hospital(Integer id, String pnombre) {
+	public Hospital(Long id, String pnombre) {
 		this.id = id;
 		this.nombre = pnombre;
 		camas = new ArrayList<Cama>();
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

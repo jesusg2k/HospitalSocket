@@ -1,34 +1,34 @@
 package py.una.entidad;
 
 public class Cama {
-    private int hospital_id;
-    private int cama_id;
+    private Long hospital_id;
+    private Long cama_id;
     private boolean ocupado;
     private boolean habilitado;
 
     public Cama(){
 
     }
-    public Cama(int hospital_id, int cama_id, boolean ocupado, boolean habilitado) {
+    public Cama(Long hospital_id, Long cama_id, boolean ocupado, boolean habilitado) {
         this.hospital_id = hospital_id;
         this.cama_id = cama_id;
         this.ocupado = ocupado;
         this.habilitado = habilitado;
     }
 
-    public int getHospital_id() {
+    public Long getHospital_id() {
         return hospital_id;
     }
 
-    public void setHospital_id(int hospital_id) {
+    public void setHospital_id(Long hospital_id) {
         this.hospital_id = hospital_id;
     }
 
-    public int getCama_id() {
+    public Long getCama_id() {
         return cama_id;
     }
 
-    public void setCama_id(int cama_id) {
+    public void setCama_id(Long cama_id) {
         this.cama_id = cama_id;
     }
 

@@ -1,8 +1,6 @@
 package py.una.bd;
 
-import py.una.entidad.Cama;
-import py.una.entidad.Hospital;
-import py.una.entidad.Persona;
+import py.una.entidad.*;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -21,7 +19,34 @@ public class TestHospitalDAO {
 			}
 		}
 
+		String cama = CamaJSON.objetoString(hospitales.get(0).getCamas().get(0));
+		System.out.println(cama);
+		String hospital = HospitalJSON.objetoString(hospitales.get(0));
+		System.out.println(hospital);
+		try {
+			Hospital hospi = HospitalJSON.stringToHospital(hospital);
+			System.out.println(hospi);
+			for(Cama c: hospi.getCamas()){
+				System.out.println(c);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Formato incorrecto");
+		}
 
+		String hospitales_json = HospitalJSON.listHospitales_toString(hospitales);
+		System.out.println(hospitales_json);
+		try {
+			ArrayList<Hospital> convertidos = HospitalJSON.listHospitalJSON_toHospitales(hospitales_json);
+			for(Hospital h: convertidos){
+				System.out.println(h);
+				for(Cama c: h.getCamas()){
+					System.out.println("\t"+c);
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 	
 	
