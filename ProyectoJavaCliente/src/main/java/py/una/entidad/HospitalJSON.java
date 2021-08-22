@@ -11,10 +11,10 @@ public class HospitalJSON {
 
 
     public static void main(String[] args) throws Exception {
-    	HospitalJSON representacion = new HospitalJSON();
-    	
-    	System.out.println("Ejemplo de uso 1: pasar de objeto a string");
-    	Hospital p = new Hospital();
+        HospitalJSON representacion = new HospitalJSON();
+
+        System.out.println("Ejemplo de uso 1: pasar de objeto a string");
+        Hospital p = new Hospital();
         p.setId(1L);
         p.setNombre("Hospital Capiata");
         p.getCamas().add(new Cama(1L,1L,false,true));
@@ -22,12 +22,12 @@ public class HospitalJSON {
         p.getCamas().add(new Cama(3L,1L,false,true));
         p.getCamas().add(new Cama(4L,1L,false,true));
 
-    	String r1 = representacion.objetoString(p);
-    	System.out.println(r1);
+        String r1 = representacion.objetoString(p);
+        System.out.println(r1);
 
-    	System.out.println("\n*************************************************************************");
-    	System.out.println("\nEjemplo de uso 2: pasar de string a objeto");
-    	String un_string = "{\"cedula\":123123,\"nombre\":\"Ana\",\"apellido\":\"Perez\",\"asignaturas\":[\"Sistemas Distribuidos\",\"Fisica\",\"Inteligencia Artificial\"]}";
+        System.out.println("\n*************************************************************************");
+        System.out.println("\nEjemplo de uso 2: pasar de string a objeto");
+        String un_string = "{\"cedula\":123123,\"nombre\":\"Ana\",\"apellido\":\"Perez\",\"asignaturas\":[\"Sistemas Distribuidos\",\"Fisica\",\"Inteligencia Artificial\"]}";
 
     }
 
@@ -61,14 +61,14 @@ public class HospitalJSON {
         return obj.toJSONString();
     }
 
-    public static ArrayList<Hospital> listHospitalJSON_toHospitales(String str) throws Exception {
+    public static ArrayList<Hospital> listHospitalJSON_toHospitales(String str, String nombre_campo) throws Exception {
         ArrayList<Hospital> hospitales = new ArrayList<Hospital>();
         JSONParser parser = new JSONParser();
 
         Object obj = parser.parse(str.trim());
         JSONObject jsonObject = (JSONObject) obj;
 
-        JSONArray msg = (JSONArray) jsonObject.get("hospitales");
+        JSONArray msg = (JSONArray) jsonObject.get(nombre_campo);
         Iterator<String> iterator = msg.iterator();
         while (iterator.hasNext()) {
             hospitales.add(stringToHospital(iterator.next()));
