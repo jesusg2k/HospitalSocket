@@ -3,7 +3,6 @@ package py.una.bd;
 import py.una.entidad.Cama;
 import py.una.entidad.Hospital;
 
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;

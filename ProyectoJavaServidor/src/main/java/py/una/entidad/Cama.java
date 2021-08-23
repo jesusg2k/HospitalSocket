@@ -16,13 +16,6 @@ public class Cama {
         this.habilitado = habilitado;
     }
 
-
-    public Cama(Long cama_id) {
-    
-        this.cama_id = cama_id;
-       
-    }
-
     public Long getHospital_id() {
         return hospital_id;
     }

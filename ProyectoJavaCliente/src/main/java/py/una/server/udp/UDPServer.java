@@ -3,9 +3,9 @@ package py.una.server.udp;
 import java.io.*;
 import java.net.*;
 
-import py.una.bd.PersonaDAO;
-import py.una.entidad.Persona;
-import py.una.entidad.PersonaJSON;
+import py.una.bd.HospitalDAO;
+import py.una.entidad.Hospital;
+import py.una.entidad.HospitalJSON;
 
 public class UDPServer {
 	
@@ -14,7 +14,7 @@ public class UDPServer {
         
         // Variables
         int puertoServidor = 9876;
-        PersonaDAO pdao = new PersonaDAO();
+        HospitalDAO hdao = new HospitalDAO();
         
         try {
             //1) Creamos el socket Servidor de Datagramas (UDP)
@@ -47,15 +47,33 @@ public class UDPServer {
                 String datoRecibido = new String(receivePacket.getData());
                 datoRecibido = datoRecibido.trim();
                 System.out.println("DatoRecibido: " + datoRecibido );
-                Persona p = PersonaJSON.stringObjeto(datoRecibido);
+                Hospital h = HospitalJSON.stringObjeto(datoRecibido);
 
                 InetAddress IPAddress = receivePacket.getAddress();
 
                 int port = receivePacket.getPort();
 
                 System.out.println("De : " + IPAddress + ":" + port);
-                System.out.println("Persona Recibida : " + p.getCedula() + ", " + p.getNombre() + " " + p.getApellido());
-                
+                //System.out.println("Persona Recibida : " + p.getCedula() + ", " + p.getNombre() + " " + p.getApellido());
+
+
+                if (opcion == 1){
+                    //Ver estado de hospitales
+                }else if( opcion == 2){
+    
+    
+                }else if(opcion == 3){
+                    //eliminar cama
+                }else if( opcion == 4){
+                    //ocupar cama
+                }else if(opcion == 5){
+                    //desocupar cama
+                }
+
+
+
+
+
                 try {
                 	pdao.insertar(p);
                 	System.out.println("Persona insertada exitosamente en la Base de datos");

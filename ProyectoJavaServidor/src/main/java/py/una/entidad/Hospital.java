@@ -7,7 +7,7 @@ public class Hospital {
 	Long id;
 	String nombre;
 
-	List<Cama> camas;
+	ArrayList<Cama> camas;
 
 	public Hospital() {
 		camas = new ArrayList<Cama>();
@@ -17,9 +17,6 @@ public class Hospital {
 		this.id = id;
 		this.nombre = pnombre;
 		camas = new ArrayList<Cama>();
-	}
-	public Hospital(Long id) {
-		this.id = id;
 	}
 
 	public Long getId() {
@@ -38,11 +35,11 @@ public class Hospital {
 		this.nombre = nombre;
 	}
 
-	public List<Cama> getCamas() {
+	public ArrayList<Cama> getCamas() {
 		return camas;
 	}
 
-	public void setCamas(List<Cama> camas) {
+	public void setCamas(ArrayList<Cama> camas) {
 		this.camas = camas;
 	}
 
@@ -52,6 +49,6 @@ public class Hospital {
 
 	@Override
 	public String toString() {
-		return id + " " + nombre;
+		return id + " " + nombre + " can. camas: "+ camas.size();
 	}
 }
