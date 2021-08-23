@@ -108,7 +108,7 @@ public class ControllerCliente {
     private void configurar_tablas_hospitales() {
         column_hospital_id.setCellValueFactory(new PropertyValueFactory<>("id"));
         column_hospital_nombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
-        column_hospital_cantidad_camas.setCellValueFactory(new PropertyValueFactory<>("cant_camas"));
+        column_hospital_cantidad_camas.setCellValueFactory(new PropertyValueFactory<>("cantidad_camas"));
     }
 
     @FXML

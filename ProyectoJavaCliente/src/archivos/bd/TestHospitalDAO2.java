@@ -1,11 +1,11 @@
-package py.una.bd;
+package archivos.bd;
 
-import py.una.entidad.*;
+import archivos.entidad.*;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class TestHospitalDAO {
+public class TestHospitalDAO2 {
 
 
 	public static void main(String args[]) throws SQLException{
