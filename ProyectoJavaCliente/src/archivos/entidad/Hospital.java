@@ -1,5 +1,6 @@
-package archivos.entidad;
+package py.una.entidad;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Hospital {
 
@@ -8,15 +9,8 @@ public class Hospital {
 
 	ArrayList<Cama> camas;
 
-	int cant_camas;
-
-	public int getCant_camas() {
-		return camas.size();
-	}
-
 	public Hospital(Long id) {
 		this.id = id;
-		camas = new ArrayList<Cama>();
 	}
 
 	public Hospital() {

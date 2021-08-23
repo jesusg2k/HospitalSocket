@@ -1,7 +1,7 @@
-package archivos.bd;
+package py.una.bd;
 
-import archivos.entidad.Cama;
-import archivos.entidad.Hospital;
+import py.una.entidad.Cama;
+import py.una.entidad.Hospital;
 
 import java.sql.*;
 import java.util.ArrayList;
