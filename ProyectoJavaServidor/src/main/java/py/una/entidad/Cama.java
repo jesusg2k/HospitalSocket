@@ -6,6 +6,10 @@ public class Cama {
     private boolean ocupado;
     private boolean habilitado;
 
+    public Cama(Long cama_id) {
+        this.cama_id = cama_id;
+    }
+
     public Cama(){
 
     }

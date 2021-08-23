@@ -1,6 +1,5 @@
 package py.una.entidad;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Hospital {
 
@@ -8,6 +7,11 @@ public class Hospital {
 	String nombre;
 
 	ArrayList<Cama> camas;
+
+	public Hospital(Long id) {
+		this.id = id;
+		camas = new ArrayList<Cama>();
+	}
 
 	public Hospital() {
 		camas = new ArrayList<Cama>();
