@@ -113,16 +113,15 @@ public class CamaDAO {
 		return lista;
 
 	}
-	public List<Cama> seleccionarByID_Cama(int id) {
+	public Cama seleccionarByID_Cama (Long id) throws Exception{
 		String query = "SELECT * FROM cama where cama_id = ? ";
 		List<Cama> lista = new ArrayList<>();
-
 		Connection conn = null;
 		try
 		{
 			conn = Bd.connect();
 			PreparedStatement pstmt = conn.prepareStatement(query);
-			pstmt.setInt(1, id);
+			pstmt.setLong(1, id);
 			ResultSet rs = pstmt.executeQuery();
 
 
@@ -145,7 +144,7 @@ public class CamaDAO {
 				System.out.println("No se pudo cerrar la conexion a BD: "+ ef.getMessage());
 			}
 		}
-		return lista;
+		return lista.get(0);
 
 	}
 	public List<Cama> seleccionarByID_Hospital(int id) {
@@ -279,12 +278,12 @@ public class CamaDAO {
 
 		return exito;
 	}
-    public int insertar(Hospital hospital) throws SQLException {
+    public Long insertar(Hospital hospital) throws SQLException {
 
         String SQL = "INSERT INTO cama(hospital_id, ocupacion_cama, habilitado_cama) "
                 + "VALUES(?,?,?)";
 
-        int id = 0;
+        Long id = 0L;
         Connection conn = null;
 
         try
@@ -300,13 +299,16 @@ public class CamaDAO {
                 // get the ID back
                 try (ResultSet rs = pstmt.getGeneratedKeys()) {
                     if (rs.next()) {
-                        id = rs.getInt(1);
+                        id = rs.getLong(1);
                     }
                 } catch (SQLException ex) {
                     System.out.println(ex.getMessage());
                 }
-            }
+            }else{
+            	id = -1L;
+			}
         } catch (SQLException ex) {
+			id = -1L;
             System.out.println("Error en la insercion: " + ex.getMessage());
         }
         finally  {
