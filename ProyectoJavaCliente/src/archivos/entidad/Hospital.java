@@ -1,4 +1,4 @@
-package py.una.entidad;
+package archivos.entidad;
 import java.util.ArrayList;
 
 public class Hospital {
@@ -7,6 +7,12 @@ public class Hospital {
 	String nombre;
 
 	ArrayList<Cama> camas;
+
+	int cant_camas;
+
+	public int getCant_camas() {
+		return camas.size();
+	}
 
 	public Hospital(Long id) {
 		this.id = id;

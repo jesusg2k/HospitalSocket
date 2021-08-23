@@ -1,11 +1,12 @@
-package py.una.server.udp;
+package archivos.server.udp;
 
+
+import archivos.entidad.*;
 
 import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
 
-import py.una.entidad.*;
 
 class UDPClient {
 

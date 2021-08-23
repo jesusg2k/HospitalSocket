@@ -1,0 +1,223 @@
+#table-view-amarillo{
+    -fx-base:  #f5d920;
+    -fx-control-inner-background: white;
+    -fx-background-color: white;   
+    -fx-border-color: black;
+}
+
+
+.list-view .scroll-bar * {
+    -fx-base: #f5d920;
+}	
+
+.tabla-sin-scroll .scroll-bar * {
+    -fx-min-width: 0;
+    -fx-pref-width: 0;
+    -fx-max-width: 0;
+
+    -fx-min-height: 0;
+    -fx-pref-height: 0;
+    -fx-max-height: 0;
+}	
+
+.list-view{
+    -fx-base: black;
+    -fx-control-inner-background: white;
+    -fx-background-color: white;   
+    -fx-border-color: black;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+
+.table-view {
+    -fx-base: black;
+    -fx-control-inner-background: white;
+    -fx-background-color: white;   
+    -fx-border-color: black;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.table-view .scroll-bar * {
+    -fx-base: #f5d920;
+}	
+
+.configurar-letra{
+	-fx-font-family: "Verdana";
+        -fx-font-weight: bold;
+	-fx-font-size: 16px;
+}
+
+.configurar-letra2{
+	-fx-font-family: "Verdana";
+        -fx-font-weight: bold;
+	-fx-font-size: 14px;
+}
+
+.configurar-letra3{
+	-fx-font-family: "Verdana";
+        -fx-font-weight: bold;
+	-fx-font-size: 14px;
+}
+
+.text-area {
+    text-area-background: #f2f2f2;
+    -fx-text-alignment: center;
+}
+
+
+#text-area *.text  {
+    	 text-area-background: #f2f2f2;
+   	 -fx-text-alignment: center ;
+}
+
+
+.text-area .content {
+    -fx-background-color: text-area-background ;
+}
+
+#btn_amarillo{
+	-fx-alignment: center;
+	-fx-background-color:  f5d920;
+	-fx-text-fill: black;
+	-fx-font-family:  "Arial Black";
+	-fx-font-size: 16px;
+}
+
+#boton_grande{
+	-fx-background-radius: 30;
+	-fx-font-family: "Arial Black";
+	-fx-font-size: 21px;
+}
+
+#font{
+	-fx-font-family: "Arial Black";
+	-fx-font-size: 16px;
+}
+
+#textfield_datos{
+	-fx-background-color: #f2f2f2;
+	-fx-font-family: "Arial Black";
+	-fx-font-size: 16px;
+	-fx-pref-width: 320px;
+	-fx-pref-height: 30px;
+}
+
+
+#combo-box2{
+    -fx-background-color:  #f5d920;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: -1 0 -1 -1;
+    -fx-cell-size: 1.7em;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+#combo-box1{
+    -fx-background-color:  #f5d920;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: -1 0 -1 -1;
+    -fx-cell-size: 1.7em; 
+    -fx-font-family: "Verdana";
+    -fx-font-weight: bold;
+    -fx-font-size: 17px;
+}
+
+.btn_amarillo_p:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+
+.btn_amarillo_p{
+    -fx-background-color: #f5d920;
+    -fx-text-fill: black;
+}
+
+.btn_negro_p:pressed {
+    -fx-background-color: #f5d920;
+    -fx-text-fill: black;
+}
+
+
+.btn_negro_p{
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+
+
+.btn_blanco_p:pressed {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+
+.btn_blanco_p{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+
+
+
+.tabla-special{
+    -fx-font-family: "Arial";
+    -fx-font-size: 16px;
+}
+
+.table-view .filler{
+    -fx-background-color: transparent;
+}
+
+.fondo-gris{
+	-fx-background-color: #f2f2f2;
+}
+
+#table-view-ventas{
+    -fx-base:  #f5d920;
+    -fx-control-inner-background: white;
+    -fx-background-color: white;   
+    -fx-border-color: black;
+}
+
+#check-box{
+    -fx-base:  #f5d920;
+    -fx-control-inner-background: white;
+    -fx-background-color: white;   
+    -fx-border-color: black;
+}
+
+#label-amarillo{
+    -fx-background-color: #f5d920;
+    -fx-border-color: black;
+}
+
+#label-amarillo-sin-borde{
+    -fx-background-color: #f5d920;
+}
+
+
+.accordion .titled-pane .title {
+    -fx-background-color: #f5d920;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-font-family: "Arial Black";    
+}
+
+.toggle-button {
+    base-color: black;
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+.toggle-button:selected {
+    base-color: #f5d920;
+    -fx-background-color: #f5d920;
+    -fx-text-fill: black;
+}
+

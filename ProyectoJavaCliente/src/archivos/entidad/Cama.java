@@ -1,4 +1,4 @@
-package py.una.entidad;
+package archivos.entidad;
 
 public class Cama {
     private Long hospital_id;

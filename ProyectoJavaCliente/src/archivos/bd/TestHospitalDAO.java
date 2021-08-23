@@ -1,7 +1,8 @@
-package py.una.bd;
+package archivos.bd;
 
-import py.una.entidad.*;
+import archivos.entidad.*;
 
+import archivos.entidad.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 

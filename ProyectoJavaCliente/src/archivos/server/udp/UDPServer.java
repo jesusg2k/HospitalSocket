@@ -1,8 +1,8 @@
-package py.una.server.udp;
+package archivos.server.udp;
 
-import py.una.bd.CamaDAO;
-import py.una.bd.HospitalDAO;
-import py.una.entidad.*;
+import archivos.bd.CamaDAO;
+import archivos.bd.HospitalDAO;
+import archivos.entidad.*;
 
 import java.net.*;
 import java.util.ArrayList;
