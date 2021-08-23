@@ -6,6 +6,15 @@ public class Mensaje <T>{
     private Long estado;
     private Long tipo_operacion;
     private String mensaje;
+    private Long tipo_objeto;
+
+    public Long getTipo_objeto() {
+        return tipo_objeto;
+    }
+
+    public void setTipo_objeto(Long tipo_objeto) {
+        this.tipo_objeto = tipo_objeto;
+    }
 
     private ArrayList<T> lista;
 
@@ -39,5 +48,10 @@ public class Mensaje <T>{
 
     public void setLista(ArrayList<T> lista) {
         this.lista = lista;
+    }
+
+    @Override
+    public String toString() {
+        return estado + " " + mensaje + " " + tipo_operacion + " "+ tipo_objeto + " " + lista;
     }
 }

@@ -6,6 +6,10 @@ public class Cama {
     private boolean ocupado;
     private boolean habilitado;
 
+    public Cama(Long cama_id) {
+        this.cama_id = cama_id;
+    }
+
     public Cama(){
 
     }
@@ -14,13 +18,6 @@ public class Cama {
         this.cama_id = cama_id;
         this.ocupado = ocupado;
         this.habilitado = habilitado;
-    }
-
-
-    public Cama(Long cama_id) {
-    
-        this.cama_id = cama_id;
-       
     }
 
     public Long getHospital_id() {
