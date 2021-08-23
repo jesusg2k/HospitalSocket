@@ -21,13 +21,13 @@ public class MensajeJson {
     Otros a considerar
     Cuerpo u otros datos específicos según el tipo de operación.
 */
-    public String paqueteJson(Long estado, String mensaje, Long tipo_operacion, Long tipo_objeto, String objetos_json){
+    public static String paqueteJson(Long estado, String mensaje, Long tipo_operacion, Long tipo_objeto, String objetos_json){
         JSONObject obj = new JSONObject();
         obj.put("estado", estado);
         obj.put("mensaje", mensaje);
         obj.put("tipo_operacion", tipo_operacion);
         obj.put("tipo_objeto", tipo_objeto);
-        obj.put("objetos", objetos_json);
+        obj.put("listas", objetos_json);
 
         return obj.toJSONString();
     }
@@ -45,12 +45,17 @@ public class MensajeJson {
         Mensaje paquete;
         if(tipo_objeto == 0){
             paquete = new Mensaje<Hospital>();
-            paquete.setLista(HospitalJSON.listHospitalJSON_toHospitales(str, "objetos"));
+            String json_hospitales = (String) jsonObject.get("listas");
+            paquete.setLista(HospitalJSON.listHospitalJSON_toHospitales(json_hospitales));
         }else{
             paquete = new Mensaje<Cama>();
-            //paquete.setLista(CamaJson.listCamaJsontoCamas(str, "objetos"));
+            String json_hospitales = (String) jsonObject.get("listas");
+            paquete.setLista(CamaJSON.listCamaJSON_toCama(json_hospitales));
         }
-
+        paquete.setEstado(estado);
+        paquete.setMensaje(mensaje);
+        paquete.setTipo_operacion(tipo_operacion);
+        paquete.setTipo_objeto(tipo_objeto);
         return paquete;
     }
 }
