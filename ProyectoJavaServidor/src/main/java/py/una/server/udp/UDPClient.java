@@ -31,7 +31,7 @@ class UDPClient {
             System.out.println("Intentando conectar a = " + IPAddress + ":" + puertoServidor +  " via UDP...");
 
             byte[] sendData = new byte[1024];
-            byte[] receiveData = new byte[2800];
+            byte[] receiveData = new byte[10000];
             String datoPaquete = "";
             System.out.print("Ingrese el número 1 si desea ver estado de Hospitales\n       " +
                             "Ingrese 2 si desea crear CamaUTI\n " +
