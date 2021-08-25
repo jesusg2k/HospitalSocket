@@ -182,13 +182,13 @@ public class ControllerCliente {
             Mensaje paqueteRecibido = MensajeJson.stringObjeto(respuesta);
             clientSocket.close();
             if(paqueteRecibido.getEstado()>1){
-                mostrar_alert_error("Ocurrió error: "+paqueteRecibido.getMensaje());
+                mostrar_alert_error("Ocurrió un error: "+paqueteRecibido.getMensaje());
             }
             return paqueteRecibido;
         } catch (Exception e) {
             System.out.println("TimeOut: El paquete udp se asume perdido.");
             e.printStackTrace();
-            mostrar_alert_error("Ocurrió error: "+e);
+            mostrar_alert_error("Ocurrió un error: "+e);
             throw e;
         }
     }
@@ -215,7 +215,7 @@ public class ControllerCliente {
             int codigo_hospital = Integer.valueOf(txt_id_hospital.getText());
             return true;
         }catch (Exception e){
-            mostrar_alert_error("Tenga cuidado eh con su ID");
+            mostrar_alert_error("Tenga cuidado con su ID");
             e.printStackTrace();
             return false;
         }
@@ -227,7 +227,7 @@ public class ControllerCliente {
         if(!valido) return;
         int cama = table_view_camas.getSelectionModel().getSelectedIndex();
         if(cama == -1){
-            mostrar_alert_error("fijese antes de apretar, seleccione");
+            mostrar_alert_error("Fijese antes de apretar, seleccione");
             return;
         }
         Cama cama_select = table_view_camas.getSelectionModel().getSelectedItem();
@@ -279,7 +279,7 @@ public class ControllerCliente {
         if(cama.getHospital_id().equals(Long.valueOf(txt_id_hospital.getText()))){
             return true;
         }else{
-            mostrar_alert_error("toque cosas de su hospital");
+            mostrar_alert_error("Seleccione camas de su hospital");
             return false;
         }
     }
@@ -290,7 +290,7 @@ public class ControllerCliente {
         if(!valido) return;
         int cama = table_view_camas.getSelectionModel().getSelectedIndex();
         if(cama == -1){
-            mostrar_alert_error("fijese antes de apretar, seleccione");
+            mostrar_alert_error("Fijese antes de apretar, seleccione");
             return;
         }
         Cama cama_select = table_view_camas.getSelectionModel().getSelectedItem();

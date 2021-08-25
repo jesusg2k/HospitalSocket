@@ -4,15 +4,41 @@ import archivos.bd.CamaDAO;
 import archivos.bd.HospitalDAO;
 import archivos.entidad.*;
 
+import java.io.IOException;
 import java.net.*;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.logging.*;
 
 
 public class UDPServer {
-	
-	
+    final static Logger LOG = Logger.getLogger("Distribuidos Sockets");
+
     public static void main(String[] a){
-        
+        String direccionServidor = "127.0.0.1";
+        // configuramos el log
+        LOG.setLevel(Level.ALL);
+        FileHandler fileTxt = null;
+        try {
+            fileTxt = new FileHandler("logger.txt",true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        fileTxt.setFormatter(new SimpleFormatter() {
+            private static final String format = "[%1$tF %1$tT] [%2$-7s] %3$s %n";
+            @Override
+            public synchronized String format(LogRecord lr) {
+                return String.format(format,
+                        new Date(lr.getMillis()),
+                        lr.getLevel().getLocalizedName(),
+                        lr.getMessage()
+                );
+            }
+        });
+        LOG.addHandler(fileTxt);
+        LOG.info("Inicio de Server");
+        LOG.warning("Advertencias");
+
         // Variables
         int puertoServidor = 9876;
         HospitalDAO hdao = new HospitalDAO();
@@ -49,11 +75,13 @@ public class UDPServer {
                 System.out.println(datoRecibido);
                 Mensaje paqueteRecibido = MensajeJson.stringObjeto(datoRecibido);
 
-                InetAddress IPAddress = receivePacket.getAddress();
+                InetAddress IPAddress_cliente = receivePacket.getAddress();
+
 
                 int port = receivePacket.getPort();
 
-                System.out.println("De : " + IPAddress + ":" + port);
+                System.out.println("De : " + IPAddress_cliente + ":" + port);
+                LOG.info("Origen " + IPAddress_cliente + " : " + port+ " Destino: " + direccionServidor + " : " +puertoServidor + " Tipo de Operacion: " + paqueteRecibido.getTipo_operacion());
                 //System.out.println("Persona Recibida : " + p.getCedula() + ", " + p.getNombre() + " " + p.getApellido());
 
                 Long opcion = paqueteRecibido.getTipo_operacion();
@@ -72,7 +100,8 @@ public class UDPServer {
                         Hospital hospital = (Hospital) paqueteRecibido.getLista().get(0);
                         Long id = new CamaDAO().insertar(hospital);
                         if(id == -1L){
-                            paquete_a_enviar = MensajeJson.paqueteJson(2L,"No se pudo crear la cama ",opcion,0L,HospitalJSON.listHospitales_toString(new ArrayList<>()));
+                            paquete_a_enviar = MensajeJson.paqueteJson(2L,"No se pudo crear la cama, no existe ese ID "+hospital.getId()
+                                    +" de Hospital",opcion,0L,HospitalJSON.listHospitales_toString(new ArrayList<>()));
                         }else{
                             Cama cama = new CamaDAO().seleccionarByID_Cama(id);
                             ArrayList<Cama> camas = new ArrayList<>();
@@ -168,8 +197,8 @@ public class UDPServer {
                 // Es no bloqueante
                 sendData = paquete_a_enviar.getBytes();
                 DatagramPacket sendPacket =
-                        new DatagramPacket(sendData, sendData.length, IPAddress,port);
-
+                        new DatagramPacket(sendData, sendData.length, IPAddress_cliente,port);
+                LOG.info("Origen: " + direccionServidor + " : " +puertoServidor+  " Destino: "  +  IPAddress_cliente  + " : " + port + " Tipo de Operacion: " + paqueteRecibido.getTipo_operacion());
                 serverSocket.send(sendPacket);
             }
 
