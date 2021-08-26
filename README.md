@@ -88,6 +88,11 @@
     INSERT INTO cama(hospital_id, ocupacion_cama, habilitado_cama) values (4,false,true);
     INSERT INTO cama(hospital_id, ocupacion_cama, habilitado_cama) values (4,false,true);
     INSERT INTO cama(hospital_id, ocupacion_cama, habilitado_cama) values (4,false,true);
+
+    INSERT INTO cama(hospital_id, ocupacion_cama, habilitado_cama) values (5,false,true);
+    INSERT INTO cama(hospital_id, ocupacion_cama, habilitado_cama) values (5,false,true);
+    INSERT INTO cama(hospital_id, ocupacion_cama, habilitado_cama) values (5,false,true);
+    INSERT INTO cama(hospital_id, ocupacion_cama, habilitado_cama) values (5,false,true);
     
     select * from hospital;
     select * from cama;
