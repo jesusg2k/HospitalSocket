@@ -1,4 +1,4 @@
-package py.una.entidad;
+package archivos.entidad;
 
 import java.util.ArrayList;
 

@@ -17,7 +17,10 @@
         - Si el JDK es version 8  
              No hace falta instalar JavaFx    
         - Si el JDK es version 11    
-             Descargar JavaFx de https://drive.google.com/drive/folders/1631C-GkPcYtb55uMogQRLn03ZjHTOuVM?usp=sharing e instalarlo en la carpeta Java    
+             Descargar JavaFx de https://drive.google.com/drive/folders/1631C-GkPcYtb55uMogQRLn03ZjHTOuVM?usp=sharing e importar la carpeta lib en el proyecto seleccionado y para ejecutar la interfaz grafica agregar el comando de ejecucion 
+
+--module-path path\javafx-sdk-11.0.2\lib --add-modules javafx.controls,javafx.fxml   
+
 • Instalar el IDE Eclipse/IDEA Intellij desde: https://www.eclipse.org/downloads/ o https://www.jetbrains.com/es-es/idea/download/  
         ◦ OBS: Puede utilizar otro IDE de su preferencia.   
 • Abrir el IDE IDEA Intellij  

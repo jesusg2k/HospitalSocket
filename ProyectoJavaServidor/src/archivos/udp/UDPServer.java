@@ -1,11 +1,13 @@
-package archivos.server.udp;
+package archivos.udp;
 
 import archivos.bd.CamaDAO;
 import archivos.bd.HospitalDAO;
 import archivos.entidad.*;
 
 import java.io.IOException;
-import java.net.*;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.*;

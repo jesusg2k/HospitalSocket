@@ -1,4 +1,4 @@
-package archivos.server.udp;
+package archivos.cliente.udp;
 
 
 import archivos.entidad.*;

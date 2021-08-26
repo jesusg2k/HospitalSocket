@@ -1,0 +1,2 @@
+[2021-08-25 20:15:13] [INFORMACIÓN] Inicio de Server 
+[2021-08-25 20:15:13] [ADVERTENCIA] Advertencias 
