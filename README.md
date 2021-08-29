@@ -75,30 +75,28 @@
 
 
 
-IDE IDEA Inetllij:
+IDE IDEA Inetllij:  
 • Abrir el IDE IDEA Intellij  
 • Abrir Menú "File -> New -> Project From Existing Sources"  
 • Elegir: el ProyectoJavaCliente o el ProyectoJavaServidor   
 • Elegir: "Maven"   
 • Marcar: "Trust Project" 
-• Marcamos: New windows o nueva ventana para que nos pueda abrir ambos proyectos (Cliente / Servidor) sin cerrarnos alguno
+• Marcamos: New windows o nueva ventana para que nos pueda abrir ambos proyectos (Cliente / Servidor) sin cerrarnos alguno  
+• Marcar la carpeta src como source: "File -> Project Stucture -> Modules"  
+• Damos click en la pestaña "Sources", click en la carpeta "src" y click en la carpeta azul "source"  
+• Le damos aplicar y aceptar  
 
-• Marcar la carpeta src como source: "File -> Project Stucture -> Modules"
-• Damos click en la pestaña "Sources", click en la carpeta "src" y click en la carpeta azul "source"
-• Le damos aplicar y aceptar
+(Solo necesario en el proyecto cliente)  
+• Si usamos JDK 11 o superior, debemos importar la libreria de JavaFX  
+• File -> Project Structure -> Library -> "+", y buscamos la carpeta que descargamos de JavaFX e importamos la subcarpeta "lib".  
+• Aceptamos todos los mensajes y damos aplicar, y aceptar  
+• Después agregamos una opcion al ejecutar para incluir a JavaFX (Solo necesario en el cliente)  
+• Run -> Edit Configuration  
+• Si no aparece VM options apretamos modify options -> ADD VM options  
+• En VM options colocamos --module-path path\javafx-sdk-11.0.2\lib --add-modules javafx.controls,javafx.fxml (path es la ruta donde tenemos la carpeta)  
+• Le damos aplicar y aceptar  
 
-(Solo necesario en el proyecto cliente)
-• Si usamos JDK 11 o superior, debemos importar la libreria de JavaFX
-• File -> Project Structure -> Library -> "+", y buscamos la carpeta que descargamos de JavaFX e importamos la subcarpeta "lib".
-• Aceptamos todos los mensajes y damos aplicar, y aceptar
-
-• Después agregamos una opcion al ejecutar para incluir a JavaFX (Solo necesario en el cliente)
-• Run -> Edit Configuration 
-• Si no aparece VM options apretamos modify options -> ADD VM options
-• En VM options colocamos --module-path path\javafx-sdk-11.0.2\lib --add-modules javafx.controls,javafx.fxml (path es la ruta donde tenemos la carpeta)
-• Le damos aplicar y aceptar
-
-• Una vez abierto los proyectos, ejecutamos el main del servidor y el main del cliente.
+• Una vez abierto los proyectos, ejecutamos el main del servidor y el main del cliente.  
 
 
 ◦ Deberá configurar en la clase archivos.bd.Bd.java lo siguiente:  
