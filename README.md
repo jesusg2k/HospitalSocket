@@ -16,27 +16,8 @@
 • Instalar el JDK de Java.
         - Si el JDK es version 8  
              No hace falta instalar JavaFx    
-        - Si el JDK es version 11    
+        - Si el JDK es version 11 o superior 
              Descargar JavaFx de https://drive.google.com/drive/folders/1631C-GkPcYtb55uMogQRLn03ZjHTOuVM?usp=sharing e importar la carpeta lib en el proyecto seleccionado y para ejecutar la interfaz grafica agregar el comando de ejecucion 
-
---module-path path\javafx-sdk-11.0.2\lib --add-modules javafx.controls,javafx.fxml   
-
-• Instalar el IDE Eclipse/IDEA Intellij desde: https://www.eclipse.org/downloads/ o https://www.jetbrains.com/es-es/idea/download/  
-        ◦ OBS: Puede utilizar otro IDE de su preferencia.   
-• Abrir el IDE IDEA Intellij  
-• Abrir Menú "File"  
-• Submenú "Project From Existing Sources"   
-• Elegir: el ProyectoJavaCliente o el ProyectoJavaServidor   
-• Elegir: "Maven"   
-• Marcar: "Trust Project"    
-• Abrir el IDE Eclipse   
-• Abrir Menú "File"  
-• Submenú "Import"  
-• Elegir: "Existing Maven Projects"  
-• Ubicar el directorio “lab-socket/ProyectoJava” dentro de su computadora. En ese directorio se encuentra el archivo pom.xml que contiene las configuraciones y librerías del proyecto.  
-• Aparecerá disponible el proyecto Maven socket, dar Finalizar.  
-• Habilitar el “Project Explorer” del IDE Eclipse: Menú “Window” -> “Show View” -> “Project Explorer”   
-• Una vez importado y teniendo la vista de proyectos del Eclipse, realizar clic derecho sobre el proyecto, luego submenú "Maven" -> "Update Project ..." (debe setearse la opción Force Update), luego "ok". En este paso descarga la librería al repositorio local de maven.    
 
 #Instrucciones
 • Base de Datos:  
@@ -91,6 +72,34 @@
     
     select * from hospital;
     select * from cama;
+
+
+
+IDE IDEA Inetllij:
+• Abrir el IDE IDEA Intellij  
+• Abrir Menú "File -> New -> Project From Existing Sources"  
+• Elegir: el ProyectoJavaCliente o el ProyectoJavaServidor   
+• Elegir: "Maven"   
+• Marcar: "Trust Project" 
+• Marcamos: New windows o nueva ventana para que nos pueda abrir ambos proyectos (Cliente / Servidor) sin cerrarnos alguno
+
+• Marcar la carpeta src como source: "File -> Project Stucture -> Modules"
+• Damos click en la pestaña "Sources", click en la carpeta "src" y click en la carpeta azul "source"
+• Le damos aplicar y aceptar
+
+(Solo necesario en el proyecto cliente)
+• Si usamos JDK 11 o superior, debemos importar la libreria de JavaFX
+• File -> Project Structure -> Library -> "+", y buscamos la carpeta que descargamos de JavaFX e importamos la subcarpeta "lib".
+• Aceptamos todos los mensajes y damos aplicar, y aceptar
+
+• Después agregamos una opcion al ejecutar para incluir a JavaFX (Solo necesario en el cliente)
+• Run -> Edit Configuration 
+• Si no aparece VM options apretamos modify options -> ADD VM options
+• En VM options colocamos --module-path path\javafx-sdk-11.0.2\lib --add-modules javafx.controls,javafx.fxml (path es la ruta donde tenemos la carpeta)
+• Le damos aplicar y aceptar
+
+• Una vez abierto los proyectos, ejecutamos el main del servidor y el main del cliente.
+
 
 ◦ Deberá configurar en la clase archivos.bd.Bd.java lo siguiente:  
 ▪ IP, puerto y nombre de la BD (variable url)  
