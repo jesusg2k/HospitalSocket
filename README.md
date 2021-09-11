@@ -1,5 +1,5 @@
-# HospitalSocket
-
+﻿# HospitalSocket
+Modificacion para examen22
 # Integrantes:
   -Barreto Salinas, Gisselle Estefania
 

@@ -1,2 +1,12 @@
 [2021-08-25 20:15:13] [INFORMACIÓN] Inicio de Server 
 [2021-08-25 20:15:13] [ADVERTENCIA] Advertencias 
+[2021-08-25 21:16:16] [INFORMACIÓN] Inicio de Server 
+[2021-08-25 21:16:16] [ADVERTENCIA] Advertencias 
+[2021-08-25 21:16:36] [INFORMACIÓN] Origen /127.0.0.1 : 49813 Destino: 127.0.0.1 : 9876 Tipo de Operacion: 1 
+[2021-08-25 21:16:43] [INFORMACIÓN] Origen: 127.0.0.1 : 9876 Destino: /127.0.0.1 : 49813 Tipo de Operacion: 1 
+[2021-09-09 20:39:54] [INFORMACIÓN] Inicio de Server 
+[2021-09-09 20:39:54] [ADVERTENCIA] Advertencias 
+[2021-09-09 20:41:11] [INFORMACIÓN] Origen /127.0.0.1 : 59711 Destino: 127.0.0.1 : 9876 Tipo de Operacion: 1 
+[2021-09-09 20:41:34] [INFORMACIÓN] Origen: 127.0.0.1 : 9876 Destino: /127.0.0.1 : 59711 Tipo de Operacion: 1 
+[2021-09-09 20:41:40] [INFORMACIÓN] Origen /127.0.0.1 : 64366 Destino: 127.0.0.1 : 9876 Tipo de Operacion: 1 
+[2021-09-09 20:41:41] [INFORMACIÓN] Origen: 127.0.0.1 : 9876 Destino: /127.0.0.1 : 64366 Tipo de Operacion: 1 
