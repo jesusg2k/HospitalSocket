@@ -1,4 +1,4 @@
-package archivos.cliente.udp;
+﻿package archivos.cliente.udp;
 
 
 import archivos.entidad.*;
@@ -7,7 +7,7 @@ import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
 
-
+//Modificacion para examen
 class UDPClient {
 
     public static void main(String a[]) throws Exception {
