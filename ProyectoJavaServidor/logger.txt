@@ -28,3 +28,37 @@
 [2021-08-29 12:33:50] [INFO   ] Origen: 127.0.0.1 : 9876 Destino: /127.0.0.1 : 55463 Tipo de Operacion: 5 
 [2021-08-29 12:33:50] [INFO   ] Origen /127.0.0.1 : 55464 Destino: 127.0.0.1 : 9876 Tipo de Operacion: 1 
 [2021-08-29 12:33:50] [INFO   ] Origen: 127.0.0.1 : 9876 Destino: /127.0.0.1 : 55464 Tipo de Operacion: 1 
+[2021-09-08 17:35:38] [INFO   ] Inicio de Server 
+[2021-09-08 17:35:39] [WARNING] Advertencias 
+[2021-09-11 08:43:40] [INFO   ] Inicio de Server 
+[2021-09-11 08:43:42] [WARNING] Advertencias 
+[2021-09-11 08:46:20] [INFO   ] Origen /127.0.0.1 : 61046 Destino: 127.0.0.1 : 9876 Tipo de Operacion: 1 
+[2021-09-11 08:46:25] [INFO   ] Origen: 127.0.0.1 : 9876 Destino: /127.0.0.1 : 61046 Tipo de Operacion: 1 
+[2021-09-11 08:48:54] [INFO   ] Origen /127.0.0.1 : 65178 Destino: 127.0.0.1 : 9876 Tipo de Operacion: 1 
+[2021-09-11 08:48:56] [INFO   ] Origen: 127.0.0.1 : 9876 Destino: /127.0.0.1 : 65178 Tipo de Operacion: 1 
+[2021-09-11 08:49:03] [INFO   ] Origen /127.0.0.1 : 50803 Destino: 127.0.0.1 : 9876 Tipo de Operacion: 1 
+[2021-09-11 08:49:04] [INFO   ] Origen: 127.0.0.1 : 9876 Destino: /127.0.0.1 : 50803 Tipo de Operacion: 1 
+[2021-09-11 08:49:08] [INFO   ] Origen /127.0.0.1 : 59113 Destino: 127.0.0.1 : 9876 Tipo de Operacion: 2 
+[2021-09-11 08:49:08] [INFO   ] Origen: 127.0.0.1 : 9876 Destino: /127.0.0.1 : 59113 Tipo de Operacion: 2 
+[2021-09-11 08:49:12] [INFO   ] Origen /127.0.0.1 : 59114 Destino: 127.0.0.1 : 9876 Tipo de Operacion: 1 
+[2021-09-11 08:49:13] [INFO   ] Origen: 127.0.0.1 : 9876 Destino: /127.0.0.1 : 59114 Tipo de Operacion: 1 
+[2021-09-11 08:49:25] [INFO   ] Origen /127.0.0.1 : 59117 Destino: 127.0.0.1 : 9876 Tipo de Operacion: 1 
+[2021-09-11 08:49:26] [INFO   ] Origen: 127.0.0.1 : 9876 Destino: /127.0.0.1 : 59117 Tipo de Operacion: 1 
+[2021-09-11 08:49:29] [INFO   ] Origen /127.0.0.1 : 59118 Destino: 127.0.0.1 : 9876 Tipo de Operacion: 2 
+[2021-09-11 08:49:29] [INFO   ] Origen: 127.0.0.1 : 9876 Destino: /127.0.0.1 : 59118 Tipo de Operacion: 2 
+[2021-09-11 08:49:31] [INFO   ] Origen /127.0.0.1 : 59119 Destino: 127.0.0.1 : 9876 Tipo de Operacion: 1 
+[2021-09-11 08:49:32] [INFO   ] Origen: 127.0.0.1 : 9876 Destino: /127.0.0.1 : 59119 Tipo de Operacion: 1 
+[2021-09-11 08:51:17] [INFO   ] Inicio de Server 
+[2021-09-11 08:51:18] [WARNING] Advertencias 
+[2021-09-11 08:52:35] [INFO   ] Origen /127.0.0.1 : 60236 Destino: 127.0.0.1 : 9876 Tipo de Operacion: 1 
+[2021-09-11 08:52:44] [INFO   ] Origen: 127.0.0.1 : 9876 Destino: /127.0.0.1 : 60236 Tipo de Operacion: 1 
+[2021-09-11 08:53:03] [INFO   ] Origen /127.0.0.1 : 52139 Destino: 127.0.0.1 : 9876 Tipo de Operacion: 2 
+[2021-09-11 08:53:06] [INFO   ] Origen: 127.0.0.1 : 9876 Destino: /127.0.0.1 : 52139 Tipo de Operacion: 2 
+[2021-09-11 08:53:06] [INFO   ] Origen /127.0.0.1 : 52140 Destino: 127.0.0.1 : 9876 Tipo de Operacion: 1 
+[2021-09-11 08:53:07] [INFO   ] Origen: 127.0.0.1 : 9876 Destino: /127.0.0.1 : 52140 Tipo de Operacion: 1 
+[2021-09-11 08:53:11] [INFO   ] Origen /127.0.0.1 : 52141 Destino: 127.0.0.1 : 9876 Tipo de Operacion: 1 
+[2021-09-11 08:53:11] [INFO   ] Origen: 127.0.0.1 : 9876 Destino: /127.0.0.1 : 52141 Tipo de Operacion: 1 
+[2021-09-11 08:53:16] [INFO   ] Origen /127.0.0.1 : 52142 Destino: 127.0.0.1 : 9876 Tipo de Operacion: 2 
+[2021-09-11 08:53:16] [INFO   ] Origen: 127.0.0.1 : 9876 Destino: /127.0.0.1 : 52142 Tipo de Operacion: 2 
+[2021-09-11 08:53:16] [INFO   ] Origen /127.0.0.1 : 52143 Destino: 127.0.0.1 : 9876 Tipo de Operacion: 1 
+[2021-09-11 08:53:17] [INFO   ] Origen: 127.0.0.1 : 9876 Destino: /127.0.0.1 : 52143 Tipo de Operacion: 1 

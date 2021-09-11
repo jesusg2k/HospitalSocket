@@ -149,6 +149,7 @@ class UDPClient {
                     new DatagramPacket(receiveData, receiveData.length);
 
             System.out.println("Esperamos si viene la respuesta.");
+            System.out.println("Texto estatico. Leticia Ferreira");
 
             //Vamos a hacer una llamada BLOQUEANTE entonces establecemos un timeout maximo de espera
             clientSocket.setSoTimeout(10000);
