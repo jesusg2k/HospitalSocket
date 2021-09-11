@@ -34,7 +34,7 @@ class UDPClient {
             byte[] sendData = new byte[1024];
             byte[] receiveData = new byte[2800];
             String datoPaquete = "";
-            System.out.print("Ingrese el número 1 si desea ver estado de Hospitales\n       " +
+            System.out.print("Para ver el numero de hospitales ingrese 1\n       " +
                             "Ingrese 2 si desea crear CamaUTI\n " +
                             "Ingrese 3 si desea eliminar CamaUTI\n " +
                             "Ingrese 4 si desea ocupar CamaUTI\n " +
